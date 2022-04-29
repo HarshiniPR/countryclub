@@ -6,72 +6,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Collections</title>
-    <link href="style.css" rel="stylesheet" />
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}"/>
 </head>
 
 <body>
     <header id="header">
         <nav class="top-nav">
-            <div><img id="headerLogo" src="images/meri.png"></img></div>
+            <div><img id="headerLogo" src="{% static 'images/meri.png' %}"></img></div>
             <label class='menu-button-container' for="menu-toggle"><div class='menu-button'></div></label>
-    
+
             <ul class="menu" style="list-style-type:none;">
                 <input id="menu-toggle" type="checkbox" />
-                
-                <li class="o1"><a href="index.html">Enchante</a></li>
-                <li class="o1"><a href="reciprocals.html">Reciprocals</a></li>
+
+                <li class="o1"><a href="/">Enchante</a></li>
+                <li class="o1"><a href="reciprocals">Reciprocals</a></li>
                 <li class="o1"><a href="#">Online Shopping</a></li>
-                <li class="o2"><a href="mr.html">Event Registration</a></li>
-                <li class="o2"><a href="login.html">Login</a></li>
-                <li class="o2"><a href="signup.html">Sign-up</a></li>
+                <li class="o2"><a href="mr">Event Registration</a></li>
+                <li class="o2"><a href="login">Login</a></li>
+                <li class="o2"><a href="signup">Sign-up</a></li>
             </ul>
         </nav>
     </header>
     <div id="heading">
-        <img style="float:left;margin-left: 5px;" src="images/house-chimney-solid.svg" id="footerlogo"></img><h2 style="margin-left:50px">Welcome to the homepage</h2>
-        <img src="images/enchante.png" id="logo"></img>
-        
+        <img style="float:left;margin-left: 5px;" src="{% static 'images/house-chimney-solid.svg' %}" id="footerlogo"></img><h2 style="margin-left:50px">Welcome to the homepage</h2>
+        <img src="{% static 'images/enchante.png' %}" id="logo"></img>
+
     </div><br><br>
     <section id="collections"  class="color8">
         <!-- <img src="meri.png"
         id="logo"></img>
         <h2>Enchante</h2> -->
-        
+
         <div id="photos">
         <ul style="list-style-type:none;">
             <li>
                 <figure class="color2">
-                    <img id="boxes" src="images/e1.jpg" height:300px width:400px alt="Dinner Date: This must be the place" />
+                    <img id="boxes" src="{% static 'images/e1.jpg' %}" height:300px width:400px alt="Dinner Date: This must be the place" />
                     <figcaption><a href="#">Dinner Date</a></figcaption>
                 </figure>
             </li>
             <li>
                 <figure class="color3">
-                    <img id="boxes" src="images/e2.jpg" height:300px width:400px alt="DJ night: rock on :0." />
+                    <img id="boxes" src="{% static 'images/e2.jpg' %}" height:300px width:400px alt="DJ night: rock on :0." />
                     <figcaption><a href="#">DJ night</a></figcaption>
                 </figure>
             </li>
             <li>
                 <figure class="color4">
-                    <img id="boxes" src="images/e3.jpg" height:300px width:400px alt="Tree on island in lake with purple sunrise." />
+                    <img id="boxes" src="{% static 'images/e3.jpg' %}" height:300px width:400px alt="Tree on island in lake with purple sunrise." />
                     <figcaption><a href="#">Resort</a></figcaption>
                 </figure>
             </li>
             <li>
                 <figure class="color5">
-                    <img id="boxes" src="images/e4.jpg" height:300px width:400px alt="Music: guitar leaning against wall." />
+                    <img id="boxes" src="{% static 'images/e4.jpg' %}" height:300px width:400px alt="Music: guitar leaning against wall." />
                     <figcaption><a href="#">Pool Party</a></figcaption>
                 </figure>
             </li>
             <li>
                 <figure class="color6">
-                    <img id="boxes" src="images/e5.jpg" height:300px width:400px alt="Vehicles: 1930's car on street." />
+                    <img id="boxes" src="{% static 'images/e5.jpg' %}" height:300px width:400px alt="Vehicles: 1930's car on street." />
                     <figcaption><a href="#">Your Wedding day</a></figcaption>
                 </figure>
             </li>
             <li>
                 <figure class="color7">
-                    <img id="boxes" src="images/e6.jpg" alt="Landscape: moonrise over tree-covered mountains." />
+                    <img id="boxes" src="{% static 'images/e6.jpg' %}" alt="Landscape: moonrise over tree-covered mountains." />
                     <figcaption><a href="#">Birthday?!</a></figcaption>
                 </figure>
             </li>
@@ -79,14 +80,14 @@
     </div>
     </section>
     <a href="#" class="hs-back-to-top" style="display: block;"><span class="arrow"></span>TOP</a>
-    <footer>
+      <footer>
         <div class="footer">
         <div class="f1">
             <h3>Stay Connected!!</h3>
-            <div class="f11"> <img src="images/facebook-brands.svg" id="footerlogo"></img>
-        
-        <img src="images/instagram-brands.svg" id="footerlogo"></img>
-        <img src="images/twitter-brands.svg" id="footerlogo"></img></div></div>
+            <div class="f11"> <img src="{% static 'images/facebook-brands.svg' %}" id="footerlogo"></img>
+
+        <img src="{% static 'images/instagram-brands.svg' %}" id="footerlogo"></img>
+        <img src="{% static 'images/twitter-brands.svg' %}" id="footerlogo"></img></div></div>
         <div class="f2">
             <h3>
                 F-304 <br>

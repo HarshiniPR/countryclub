@@ -5,23 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Membership registration</title>
-    <link href="style.css" rel="stylesheet" />
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}"/>
 </head>
 <body>
     <header id="header">
         <nav class="top-nav">
-            <div><img id="headerLogo" src="images/meri.png"></img></div>
+            <div><img id="headerLogo" src="{% static 'images/meri.png' %}"></img></div>
             <label class='menu-button-container' for="menu-toggle"><div class='menu-button'></div></label>
-    
+
             <ul class="menu" style="list-style-type:none;">
                 <input id="menu-toggle" type="checkbox" />
-                
-                <li class="o1"><a href="index.html">Enchante</a></li>
-                <li class="o1"><a href="reciprocals.html">Reciprocals</a></li>
+
+                <li class="o1"><a href="/">Enchante</a></li>
+                <li class="o1"><a href="reciprocals">Reciprocals</a></li>
                 <li class="o1"><a href="#">Online Shopping</a></li>
-                <li class="o2"><a href="mr.html">Event Registration</a></li>
-                <li class="o2"><a href="login.html">Login</a></li>
-                <li class="o2"><a href="signup.html">Sign-up</a></li>
+                <li class="o2"><a href="mr">Event Registration</a></li>
+                <li class="o2"><a href="login">Login</a></li>
+                <li class="o2"><a href="signup">Sign-up</a></li>
             </ul>
         </nav>
     </header>
@@ -34,7 +35,7 @@
         <table >
       <tr><td><label>MemberID: </label></td><td>  <input type="text" name="memberID"></td></tr>
      <tr><td> <label>Password: </label> </td><td> <input type="password" name="password"></td></tr>
-     
+
     <tr><td></td><td ><input id="submitbutton" type="submit" value="Login HERE"></td></tr>
     </table>
     </form>
@@ -45,10 +46,10 @@
         <div class="footer">
         <div class="f1">
             <h3>Stay Connected!!</h3>
-            <div class="f11"> <img src="images/facebook-brands.svg" id="footerlogo"></img>
-        
-        <img src="images/instagram-brands.svg" id="footerlogo"></img>
-        <img src="images/twitter-brands.svg" id="footerlogo"></img></div></div>
+            <div class="f11"> <img src="{% static 'images/facebook-brands.svg' %}" id="footerlogo"></img>
+
+        <img src="{% static 'images/instagram-brands.svg' %}" id="footerlogo"></img>
+        <img src="{% static 'images/twitter-brands.svg' %}" id="footerlogo"></img></div></div>
         <div class="f2">
             <h3>
                 F-304 <br>

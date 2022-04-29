@@ -1,3 +1,4 @@
+{% load static %}
 :root {
     --color1: #001219;
     --color2: #005f73;
@@ -76,36 +77,36 @@ header #header{
     width:30px;
 }
 figure{
-    height:300px; 
+    height:300px;
  width:250px;
  display:flex;
  flex-direction:column;
  position:relative;
  align-items: center;
-   
+
 }
 #logo {
-    height:160px; 
-   
+    height:160px;
+
     border:none;
-    
+
 }
 #boxes{
-    height:300px; 
+    height:300px;
  width:300px;
  border-radius: 25px;
  border: 6px solid ;
- 
+
 }
 figcaption{
     background-color:white;
-   
+
     padding: 1rem;
     position:absolute;
     bottom:2%;
     width:290px;
     opacity:0.7;
-   
+
     border-radius: 23px;
 
 }
@@ -127,7 +128,7 @@ figcaption a{
     flex-direction: row;
     flex-wrap: wrap;
     gap:30%;
-   
+
     height: 280px;
     background-color:var(--color6) ;
 }
@@ -146,7 +147,7 @@ figcaption a{
     display:flex;
     flex-direction: row;
     gap:5%;
-    
+
 }
 .color2,
 .color2 a:hover {
@@ -213,14 +214,14 @@ figcaption a{
     .o2{
         order:2;
     }
-   
+
 }
 header{
     height: fit-content;
     background-color: black;
 }
 @media (min-width: 800px) {
-    
+
     section h2 {
         margin-left: 100px;
     }
@@ -234,7 +235,7 @@ header{
     ul{
         flex-wrap: nowrap;
     }
-   
+
 }
 .top-nav {
     display: flex;
@@ -248,7 +249,7 @@ header{
     height: 50px;
     padding: 1em;
   }
-  
+
   .menu {
     display: flex;
     flex-direction: row;
@@ -256,11 +257,11 @@ header{
     margin: 0;
     padding: 0;
   }
-  
+
   .menu > li {
     margin: 0 1rem;
   }
-  
+
   .menu-button-container {
     display: none;
     height: 100%;
@@ -270,11 +271,11 @@ header{
     justify-content: center;
     align-items: center;
   }
-  
+
   #menu-toggle {
     display: none;
   }
-  
+
   .menu-button,
   .menu-button::before,
   .menu-button::after {
@@ -286,31 +287,31 @@ header{
     transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
     border-radius: 2px;
   }
-  
+
   .menu-button::before {
     content: '';
     margin-top: -8px;
   }
-  
+
   .menu-button::after {
     content: '';
     margin-top: 8px;
   }
-  
+
   #menu-toggle:checked + .menu-button-container .menu-button::before {
     margin-top: 0px;
     transform: rotate(405deg);
   }
-  
+
   #menu-toggle:checked + .menu-button-container .menu-button {
     background: rgba(255, 255, 255, 0);
   }
-  
+
   #menu-toggle:checked + .menu-button-container .menu-button::after {
     margin-top: 0px;
     transform: rotate(-405deg);
   }
-  
+
   @media (max-width: 800px) {
     .menu-button-container {
       display: flex;
@@ -354,7 +355,7 @@ header{
   /* css for reciprocals
    */
    .branches{
-       background-image: url("images/branches2.jpg");
+       background-image: url("{% static 'images/branches2.jpg' %}");
        width:100%;
        height: 300px;
        background-repeat: no-repeat;
@@ -362,7 +363,7 @@ header{
    }
 
    /* CSS */
-   
+
    #submitbutton {
      align-items: center;
      background-clip: padding-box;
@@ -391,21 +392,21 @@ header{
      vertical-align: baseline;
      width: auto;
    }
-   
-   
+
+
    #submitbutton:hover,
-   
+
    #submitbutton:focus {
      background-color: #fb8332;
      box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
    }
-   
- 
+
+
    #submitbutton:hover {
      transform: translateY(-1px);
    }
-   
-   
+
+
    #submitbutton:active {
      background-color: #c85000;
      box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
