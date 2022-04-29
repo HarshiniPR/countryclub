@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Shopping</title>
-    <link rel="stylesheet" href="style.css">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
@@ -44,56 +45,56 @@
         <div class="shop-content">
             <!--box-1-->
             <div class="product-box">
-                <img src="images/book.jpeg" alt="" class="product-img">
+                <img src="{% static 'images/book.jpeg' %}" alt="" class="product-img">
                 <h2 class="product-title">Books</h2>
                 <span class="price">25₹</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
             <!--box-2-->
             <div class="product-box">
-                <img src="images/pen.jpeg" alt="" class="product-img">
+                <img src="{% static 'images/pen.jpeg' %}" alt="" class="product-img">
                 <h2 class="product-title">Pens</h2>
                 <span class="price">50₹</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
             <!--box-3-->
             <div class="product-box">
-                <img src="images/ball.jpeg" alt="" class="product-img">
+                <img src="{% static 'images/ball.jpeg' %}" alt="" class="product-img">
                 <h2 class="product-title">Cricket Ball</h2>
                 <span class="price">30₹</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
             <!--box-4-->
             <div class="product-box">
-                <img src="images/bat.jpg" alt="" class="product-img">
+                <img src="{% static 'images/bat.jpg' %}" alt="" class="product-img">
                 <h2 class="product-title">Cricket Bat</h2>
                 <span class="price">500₹</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
             <!--box-5-->
             <div class="product-box">
-                <img src="images/stump.jpeg" alt="" class="product-img">
+                <img src="{% static 'images/stump.jpeg' %}" alt="" class="product-img">
                 <h2 class="product-title">Stumps</h2>
                 <span class="price">350₹</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
             <!--box-6-->
             <div class="product-box">
-                <img src="images/choco.jpeg" alt="" class="product-img">
+                <img src="{% static 'images/choco.jpeg' %}" alt="" class="product-img">
                 <h2 class="product-title">Chocolates</h2>
                 <span class="price">100₹</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
             <!--box-7-->
             <div class="product-box">
-                <img src="images/speaker.jpeg" alt="" class="product-img">
+                <img src="{% static 'images/speaker.jpeg' %}" alt="" class="product-img">
                 <h2 class="product-title">Speakers</h2>
                 <span class="price">300₹</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
             <!--box-8-->
             <div class="product-box">
-                <img src="images/teddy.jpeg" alt="" class="product-img">
+                <img src="{% static 'images/teddy.jpeg' %}" alt="" class="product-img">
                 <h2 class="product-title">Teddy Bear</h2>
                 <span class="price">250₹</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
@@ -101,7 +102,7 @@
         </div>
     </section>
     <!--link to JS-->
-    <script src="main.js"></script>
+    <script src="{% static '/js/main.js' %}"></script>
 </body>
 
 </html>
