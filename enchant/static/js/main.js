@@ -89,34 +89,43 @@ function addProductToCart(title, price, productImg) {
         <div class="cart-product-title">${title}</div>
         <div class="cart-price">${price}</div>
         <input type="number" value="1" class="cart-quantity">
-
-        <i class='bx bxs-trash-alt' cart-remove></i> 
+        </div>
+        <i class='bx bxs-trash-alt cart-remove'></i> 
     `;
     cartShopBox.innerHTML = cartBoxContent;
     cartItems.append(cartShopBox);
     cartShopBox.getElementsByClassName("cart-remove")[0].addEventListener("click", removeCartItem);
     cartShopBox.getElementsByClassName("cart-quantity")[0].addEventListener("change", quantityChanged);
-    for (var i = 0; i < cartItemsNames.length; i++) {
-        alert("Item is already added");
-        return;
-    }
+    // for (var i = 0; i < cartItemsNames.length; i++) {
+    //     alert("Item is already added");
+    //     return;
+    // }
 }
 
 
 //upadte total
 function updatetotal() {
+    console.log("total calculated");
     var cartContent = document.getElementsByClassName('cart-content')[0];
     var cartBoxes = cartContent.getElementsByClassName('cart-box');
+
     var total = 0;
     for (var i = 0; i < cartBoxes.length; i++) {
+
         var cartBox = cartBoxes[i];
         var priceElement = cartBox.getElementsByClassName('cart-price')[0];
         var quantityElement = cartBox.getElementsByClassName('cart-quantity')[0];
-        var price = parseFloat(priceElement.innerText.replace("$", ""));
-        var quantity = quantityElement.ariaValueMax;
+
+        var price = parseFloat(priceElement.innerText.replace("₹", ""));
+        console.log(price);
+
+
+        var quantity = quantityElement.value;
+        console.log(quantity);
+
         total = total + (price * quantity);
     }
     // if price contain some cents value
     total = Math.round(total * 100) / 100;
-    document.getElementsByClassName("total-price")[0].innerText = "$" + total;
+    document.getElementsByClassName("total-price")[0].innerText = total + "₹";
 }

@@ -22,7 +22,7 @@ body {
 }
 .container{
     max-width: 1068px;
-    margin: auto;
+    margin-left: 30px;
     width: 100%;
 }
 section {
@@ -30,13 +30,16 @@ section {
 }
 /*header*/
 header{
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     left: 0;
     width: 100%;
     background: var(--bg-color);
     box-shadow: 0 1px 4px hsl(0 4% 15% / 10%);
     z-index: 100;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
 }
 .nav{
     display: flex;
@@ -57,10 +60,11 @@ header{
 .cart {
     scroll-behavior: smooth;
     overflow-y: scroll;
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0%;
-    width:240px;
+    height: 500px;
+    width:280px;
     min-height: 100vh;
     padding: 20px;
     background-color: white;
@@ -163,7 +167,7 @@ header{
     margin-bottom: 1.5rem;
 }
 .shop {
-    margin-top: 2rem;
+    margin-top: 0.1rem;
 }
 /*shop content*/
 .shop-content {
